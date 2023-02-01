@@ -1,8 +1,13 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required( VERSION 3.10)
 project( mlcpp )
 find_package( OpenCV REQUIRED )
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -O3")
-file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*.cpp")
+find_package( PythonLibs REQUIRED )
+find_package( Python3 COMPONENTS Interpreter Development REQUIRED )
+
+include_directories(${PYTHON_INCLUDE_DIRS} )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
-add_executable(mlcpp main.cpp ${SOURCES})
+file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*.cpp" )
+
+add_executable(mlcpp main.cpp ${SOURCES} )
 target_link_libraries( mlcpp ${OpenCV_LIBS} )
+target_link_libraries(mlcpp ${PYTHON_LIBRARIES} )

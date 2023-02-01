@@ -7,3 +7,6 @@ CMakeCache.txt
 Makefile
 mlcpp
 data/mnist_png/
+data/*.csv
+test_*.cpp
+data/bird_pic.png

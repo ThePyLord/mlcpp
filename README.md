@@ -1,5 +1,5 @@
 ## About
-This is a C++ implementation of an artificial neural network. It was inspired by an example in this book.
+This is a C++ implementation of an fully connected neural network. It was inspired by an example in this book.
 
 ![Neural Networks and Deep Learning](https://raw.githubusercontent.com/PacktPublishing/Hands-On-Computer-Vision-with-TensorFlow-2/a8c9aa88eeb46d3ea81e36ea95b1b2c73f8036d8/banner_images/book_cover.png).
 
